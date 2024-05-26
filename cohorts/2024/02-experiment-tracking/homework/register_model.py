@@ -82,6 +82,7 @@ def run_register_model(data_path: str, top_n: int):
         model_uri=f"runs:/{best_run.info.run_id}/model",
         name="best-random-forest-model"
     )
+    print(f"the rmse of the best model is {best_run.data.metrics['test_rmse']}")
 
 
 if __name__ == '__main__':
